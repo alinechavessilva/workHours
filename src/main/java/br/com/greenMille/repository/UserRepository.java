@@ -1,10 +1,8 @@
 package br.com.greenMille.repository;
  
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
-import br.com.greenMille.models.User;
+import br.com.greenMille.models.Users;
  
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<Users, Long> {
  
 }

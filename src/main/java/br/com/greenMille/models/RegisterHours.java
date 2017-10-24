@@ -20,9 +20,9 @@ public class RegisterHours {
 	private LocalDateTime timeInitial;
 	private LocalDateTime timeFinal;
 	
-	@OneToOne(targetEntity=User.class, fetch=FetchType.EAGER)
+	@OneToOne(targetEntity=Users.class, fetch=FetchType.EAGER)
     @JoinColumn(name="userId")
-	private Integer userId;
+	private Long userId;
 	
 	
 	public Integer getId() {
@@ -43,10 +43,10 @@ public class RegisterHours {
 	public void setTimeFinal(LocalDateTime timeFinal) {
 		this.timeFinal = timeFinal;
 	}
-	public Integer getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
-	public void setUserId(Integer userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}	
 

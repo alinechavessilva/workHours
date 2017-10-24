@@ -4,13 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class User {
-	
-	public User(){
-		super();
-	}
+@Table(name = "users")
+public class Users {
 	
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)    
@@ -19,7 +17,7 @@ public class User {
     private String email;
 	
 	
-    public User(Long id, String nome, String email) {
+    public Users(Long id, String nome, String email) {
 	    this.id = id;
 	    this.nome = nome;
 	    this.email = email;
